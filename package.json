@@ -1,5 +1,12 @@
 {
-  "name": "Electron POC",
+  "name": "Electron_POC",
   "version": "0.1.0",
-  "main": "main.js"
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:osx": "electron-packager . FooBar --platform=darwin --arch=x64 --version=0.33.1 --overwrite --asar=true"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.1.0"
+  }
 }
