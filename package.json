@@ -4,7 +4,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build:osx": "electron-packager . FooBar --platform=darwin --arch=x64 --version=0.33.1 --overwrite --asar=true"
+    "build:osx": "electron-packager . FooBar --platform=darwin --arch=x64 --version=0.33.1 --overwrite --asar=true",
+    "build:win": "electron-packager . FooBar --platform=win32  --arch=x64 --version=0.33.1 --overwrite --asar=true" 
   },
   "devDependencies": {
     "electron-packager": "^5.1.0"
