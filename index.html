@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello World!</title>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script type="text/javascript" src="./www/js/app.js"></script>
+
+    <!-- CSS -->
+    <!--<script src="./node_modules/bootstrap/dist/css/bootstrap.css"></script>-->
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap-theme.css">
+
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="./www/views/login/loginCtrl.js"></script>
+    <script type="text/javascript" src="./www/views/main/mainCtrl.js"></script>
+    <script type="text/javascript" src="./www/views/stations/stationsCtrl.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="./www/js/services/restService.js"></script>
+    <script type="text/javascript" src="./www/js/services/settingsService.js"></script>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using io.js <script>document.write(process.version)</script>
-    and Electron <script>document.write(process.versions['electron'])</script>.
+  <body ng-app="electronApp">
+    <div ui-view></div>
   </body>
 </html>
 

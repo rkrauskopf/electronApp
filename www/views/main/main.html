@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li ng-class="{active: vm.location.hash === '#/main/stations'}"><a ui-sref="main.stations">Stations</a></li>
+        <li ng-class="{active: vm.location.hash === '#/main/graphs'}"><a ui-sref="main.graphs">Graph Data</a></li>
+        <li ng-class="{active: vm.location.hash === '#/main/settings'}"><a ui-sref="main.settings">Settings</a></li>
+    </ul>
+    <div ui-view="tab-view"></div>
+</div>

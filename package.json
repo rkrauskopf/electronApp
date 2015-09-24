@@ -5,9 +5,15 @@
   "scripts": {
     "start": "electron .",
     "build:osx": "electron-packager . FooBar --platform=darwin --arch=x64 --version=0.33.1 --overwrite --asar=true",
-    "build:win": "electron-packager . FooBar --platform=win32  --arch=x64 --version=0.33.1 --overwrite --asar=true" 
+    "build:win": "electron-packager . FooBar --platform=win32  --arch=x64 --version=0.33.1 --overwrite --asar=true"
   },
   "devDependencies": {
-    "electron-packager": "^5.1.0"
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.33.1"
+  },
+  "dependencies": {
+    "angular": "^1.4.6",
+    "angular-ui-router": "^0.2.15",
+    "bootstrap": "^3.3.5"
   }
 }
