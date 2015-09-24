@@ -13,6 +13,10 @@
                 rest.getStations()
                     .then(function(response) {
                         vm.stations = response.data;
+
+                        vm.stations.forEach(function(station) {
+                            station.isCollapsed = true;
+                        });
                     });
             }
         }

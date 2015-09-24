@@ -1,8 +1,29 @@
 <div class="container-fluid">
     <h2>Available Stations</h2>
-    <ul class="list-group row">
-        <li class="list-group-item" ng-repeat="station in vm.stations">
-            {{station.name}}
-        </li>
-    </ul>
+    <button class="btn btn-primary" type="button">Add New Station</button>
+    <table class="table table-striped table-hover'">
+        <thead>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Settings</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat-start="station in vm.stations" ng-class="{danger: station.status === 'disconnected'}">
+                <td>{{station.name}}</td>
+                <td>{{station.status}}</td>
+                <td>{{station.description}}</td>
+                <td><button class="btn btn-primary" type="button" ng-click="station.isCollapsed = !station.isCollapsed">View Settings</button></td>
+            </tr>
+            <tr id="settings-{{station.name}}" collapse="station.isCollapsed" ng-repeat-end>
+                <td colspan="3">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="(key,value) in station.settings">
+                            <strong>{{key}}</strong>: {{value}}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

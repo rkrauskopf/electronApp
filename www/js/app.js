@@ -5,7 +5,7 @@
      * This is the main entry point into the application.
      * This module contains application configuration, dependencies, and startup code.
      */
-    var app = angular.module('electronApp', ['ui.router']);
+    var app = angular.module('electronApp', ['ui.router', 'ui.bootstrap']);
 
     app.config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/login');
