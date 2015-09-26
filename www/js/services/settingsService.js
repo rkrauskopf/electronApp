@@ -7,7 +7,8 @@
 
     function settings() {
         return {
-            awsServerUrl: 'http://localhost:1337/',
+            //awsServerUrl: 'http://52.89.180.140:1337/',
+            awsServerUrl: 'http://52.89.180.140:1337/',
             userID: ''
         }
     }
